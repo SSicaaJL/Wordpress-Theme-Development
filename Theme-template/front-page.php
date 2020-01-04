@@ -1,11 +1,6 @@
 <?php
 /**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
+ * nusscistudentlife front page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -19,6 +14,7 @@ get_header();
 	<div class="row">
 		<div class="col" style="height: 70vh;">
 			<p>This is the front page, containers and site dynamics to be implemented</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis porta purus, in vestibulum magna ullamcorper in. Sed ac bibendum urna, et vehicula dui. Aliquam luctus enim euismod nisl interdum, id suscipit quam sollicitudin. Proin vitae massa vitae magna scelerisque pulvinar. Curabitur posuere eu ex eget feugiat. Suspendisse bibendum pharetra metus ut commodo. Donec in diam nec magna semper pretium. Integer lectus nibh, sagittis mollis finibus eu, imperdiet quis quam.</p>
 		</div>
 	</div>
 </div>
