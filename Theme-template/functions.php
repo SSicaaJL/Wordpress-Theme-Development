@@ -7,6 +7,7 @@
  * @package nusscistudentlife
  */
 
+/** MAIN SETUP */
 if ( ! function_exists( 'nusscistudentlife_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -23,17 +24,6 @@ if ( ! function_exists( 'nusscistudentlife_setup' ) ) :
 		 * to change 'nusscistudentlife' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'nusscistudentlife', get_template_directory() . '/languages' );
-
-		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
-
-		/*
-		 * Let WordPress manage the document title.
-		 * By adding theme support, we declare that this theme does not use a
-		 * hard-coded <title> tag in the document head, and expect WordPress to
-		 * provide it for us.
-		 */
-		add_theme_support( 'title-tag' );
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
@@ -79,12 +69,23 @@ if ( ! function_exists( 'nusscistudentlife_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		/** WORDPRESS SETUPS */
+		add_theme_support('title-tag'); // Lets wordpress manage the document title, without hard-coded <title> tag in document head
+		add_theme_support( 'automatic-feed-links' ); // Add default posts and comments RSS feed links to head.
+
+		/** WORDPRESS BOOTSTRAP NAVWALKER */
+		require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+		register_nav_menus( array(
+			'primary' => __( 'Primary Menu', 'nusscistudentlife' ),
+		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'nusscistudentlife_setup' );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
+
+/** CONTENT WIDTH */
+/** Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
  *
@@ -116,17 +117,19 @@ function nusscistudentlife_widgets_init() {
 }
 add_action( 'widgets_init', 'nusscistudentlife_widgets_init' );
 
+
 /** ENQUEUE SCRIPTS AND STYLESHEETS */
 function nusscistudentlife_scripts() {
 
 	/** STYLES */
-	wp_enqueue_style('bootstrap-core', get_template_directory_uri() .'/css/bootstrap.min.css'); /** link bootstrap css */
-	wp_enqueue_style('fontawesome', get_template_directory_uri() .'/css/fontawesome/css/all.min.css'); /** link fontawesome icons */
-	wp_enqueue_style( 'nusscistudentlife-style', get_stylesheet_uri() ); /** link style.css */
+	wp_enqueue_style('bootstrap-core', get_template_directory_uri() .'/css/bootstrap.min.css'); // link bootstrap css
+	wp_enqueue_style('fontawesome', get_template_directory_uri() .'/css/fontawesome/css/all.min.css'); // link fontawesome icons
+	wp_enqueue_style( 'nusscistudentlife-style', get_stylesheet_uri() ); // link style.css
+
+	/** TEMPORARY STYLES */
+	//wp_enqueue_style('header-style', get_template_directory_uri() .'headerstyle.css'); // will merge with style.css later on
 	
 	/** SCRIPTS */
-	wp_enqueue_script( 'nusscistudentlife-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	wp_enqueue_script( 'nusscistudentlife-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	wp_enqueue_script('bootstrap-js', get_template_directory_uri() .'/js/bootstrap.min.js', array('jquery'), null, true); /** bootstrap js */
 
 	/** LEAVE ALONE FIRST */
