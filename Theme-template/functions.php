@@ -17,13 +17,6 @@ if ( ! function_exists( 'nusscistudentlife_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function nusscistudentlife_setup() {
-		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on nusscistudentlife, use a find and replace
-		 * to change 'nusscistudentlife' to the name of your theme in all the template files.
-		 */
-		load_theme_textdomain( 'nusscistudentlife', get_template_directory() . '/languages' );
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
@@ -31,11 +24,6 @@ if ( ! function_exists( 'nusscistudentlife_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'nusscistudentlife' ),
-		) );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -77,7 +65,7 @@ if ( ! function_exists( 'nusscistudentlife_setup' ) ) :
 		/** WORDPRESS BOOTSTRAP NAVWALKER */
 		require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'nusscistudentlife' ),
+			'primary' => __( 'Primary Menu', 'nusscistudentlife' ), // Registers a nav menu named Primary Menu.
 		) );
 	}
 endif;
