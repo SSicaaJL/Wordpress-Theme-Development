@@ -14,11 +14,13 @@
 
 	<footer class="container-fluid py-3 bg-light">
 		<div class="row">
-			<div class="col-md-4" style="height:150px;">
+			<div class="col-md-4">
 				<p>Footer content contained here</p>
 			</div>
 			<div class="col-md-8">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis porta purus, in vestibulum magna ullamcorper in. Sed ac bibendum urna, et vehicula dui. Aliquam luctus enim euismod nisl interdum, id suscipit quam sollicitudin. Proin vitae massa vitae magna scelerisque pulvinar. Curabitur posuere eu ex eget feugiat. Suspendisse bibendum pharetra metus ut commodo. Donec in diam nec magna semper pretium. Integer lectus nibh, sagittis mollis finibus eu, imperdiet quis quam.</p>
+
+				<p class="float-right">Powered by NUS Science Club</p>
 			</div>
 		</div>
 	</footer><!-- #colophon -->
