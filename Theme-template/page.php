@@ -10,17 +10,22 @@
 get_header();
 ?>
 
+<div class="container-fluid customcontent">
+	<p>debug: page.php has loaded</p>
+</div>
+
 <main class="container-fluid">
 	<div class="row">
-		<div class="col-md-2">
-			<h1>page.php has loaded</h1>
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<div class="light-bg"><h1><?php the_title();?></h1></div>
-				<?php the_content();
-				endwhile;
+		<div class="col">
+			<?php if ( have_posts() ) : 
+				while ( have_posts() ) : the_post();
+					the_title();
+					the_content();
+				endwhile; 
 			endif;?>
 		</div>
 	</div>
+
 </main>
 
 <?php
