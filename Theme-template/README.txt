@@ -9,7 +9,7 @@ For icons, using free fontawesme icon library at https://fontawesome.com
 
 ### WORKLOARD ###
 
-@peixuan can you do up the front-page.php?
+@peixuan can you do up the single.php?
 
 ### SOME DOCUMENTATION ###
 
