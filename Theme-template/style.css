@@ -25,6 +25,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	font-family: monospace;
 }
 
+/** CUSTOM STYLES */
+.sci-bg-orange {
+	background-color: #ef7b00!important;
+}
+
+.sci-bg-blue {
+	background-color: #003062!important;
+}
+
+.sci-hr-white {
+	border-top-color: rgba(255,255,255,0.2);
+}
+
 /** OVERWRITING BOOTSTRAP */
 a {
 	color: #000000;
@@ -32,4 +45,13 @@ a {
 
 a:hover {
 	color: #000000;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
 }
