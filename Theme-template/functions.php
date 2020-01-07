@@ -29,13 +29,13 @@ if ( ! function_exists( 'nusscistudentlife_setup' ) ) :
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
+		/* add_theme_support( 'html5', array(
 			'search-form',
 			'comment-form',
 			'comment-list',
 			'gallery',
 			'caption',
-		) );
+		) );*/
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'nusscistudentlife_custom_background_args', array(
@@ -66,6 +66,7 @@ if ( ! function_exists( 'nusscistudentlife_setup' ) ) :
 		require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 		register_nav_menus( array(
 			'primary' => __( 'Primary Menu', 'nusscistudentlife' ), // Registers a nav menu named Primary Menu.
+			'footer-menu' => __( 'Footer Menu', 'nusscistudentlife' ), // Register a nav menu named Footer Menu
 		) );
 	}
 endif;
@@ -87,13 +88,12 @@ function nusscistudentlife_content_width() {
 }
 add_action( 'after_setup_theme', 'nusscistudentlife_content_width', 0 );
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
+/** WIDGET REGISTER */
+/** @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar */
 function nusscistudentlife_widgets_init() {
-	register_sidebar( array(
+
+	/** TEMPLATE FOR REGISTERING WIDGETS */
+	/*register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'nusscistudentlife' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'nusscistudentlife' ),
@@ -101,7 +101,45 @@ function nusscistudentlife_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+	) );*/
+
+	/** FOOTER WIDGETS (CONTAINING CONTENT AND MENU) */
+	register_sidebar( array( // FOOTER ITEM (LEFT)
+		'name'			=> esc_html__( 'Footer - Left', 'nusscistudentlife' ),
+		'id'			=> 'footer-widget-l',
+		'description'	=> esc_html__( 'Add content to the left of the footer', 'nusscistudentlife' ),
+		'before_widget'	=> '<div>',
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h6 class="text-light">',
+		'after_title'	=> '</h6>',
+	));
+	register_sidebar( array( // FOOTER ITEM (CENTER)
+		'name'			=> esc_html__( 'Footer - Center', 'nusscistudentlife' ),
+		'id'			=> 'footer-widget-c',
+		'description'	=> esc_html__( 'Add content to the center of the footer', 'nusscistudentlife' ),
+		'before_widget'	=> '<div>',
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h6 class="text-light">',
+		'after_title'	=> '</h6>',
+	));
+	register_sidebar( array( // FOOTER ITEM (RIGHT)
+		'name'			=> esc_html__( 'Footer - Right', 'nusscistudentlife' ),
+		'id'			=> 'footer-widget-r',
+		'description'	=> esc_html__( 'Add content to the right of the footer', 'nusscistudentlife' ),
+		'before_widget'	=> '<div>',
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h6 class="text-light">',
+		'after_title'	=> '</h6>',
+	));
+	register_sidebar( array( // FOOTER MENU
+		'name'			=> esc_html__( 'Footer - Bottom', 'nusscistudentlife' ),
+		'id'			=> 'footer-widget-b',
+		'description'	=> esc_html__( 'Add content and menu to the footer', 'nusscistudentlife' ),
+		'before_widget'	=> '<div>',
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h6 class="text-light">',
+		'after_title'	=> '</h6>',
+	));
 }
 add_action( 'widgets_init', 'nusscistudentlife_widgets_init' );
 
@@ -112,7 +150,7 @@ function nusscistudentlife_scripts() {
 	/** STYLES */
 	wp_enqueue_style('bootstrap-core', get_template_directory_uri() .'/css/bootstrap.min.css'); // link bootstrap css
 	wp_enqueue_style('fontawesome', get_template_directory_uri() .'/css/fontawesome/css/all.min.css'); // link fontawesome icons
-	wp_enqueue_style( 'nusscistudentlife-style', get_stylesheet_uri() ); // link style.css
+	wp_enqueue_style('nusscistudentlife-style', get_stylesheet_uri() ); // link style.css
 
 	/** TEMPORARY STYLES */
 	//wp_enqueue_style('header-style', get_template_directory_uri() .'headerstyle.css'); // will merge with style.css later on
