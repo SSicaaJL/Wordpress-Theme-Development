@@ -43,7 +43,7 @@
 		</div><hr class="sci-hr-white">
 
 		<!-- SECOND(BOTTOM) PART OF THE FOOTER -->
-		<div class="row pb-3 text-center text-secondary">
+		<div class="row pb-3 text-center text-secondary" style="font-size: 0.8rem;">
 			<?php //Bottom widget
 				if ( is_active_sidebar( 'footer-widget-b') ) {?>
 					<hr class="sci-hr-white">
