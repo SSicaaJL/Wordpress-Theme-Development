@@ -38,7 +38,9 @@ get_header();
 					<div class="card my-2">
 						<div class="card-body">
 							<a href="<?php the_permalink() ?>"><h5 class="card-title"><?php the_title(); ?></h5></a>
-							<p class="card-text"><?php the_excerpt() ?><i><?php echo get_the_date(); ?>, written by <?php the_author(); ?></i></p>
+							<p class="card-text"><?php the_excerpt() ?>
+							<i><?php echo get_the_date(); ?>, written by 
+							<?php the_author_posts_link();?></i></p>
 							<a href="<?php the_permalink() ?>" class="float-right px-3">Read more...</a>
 						</div>
 					</div>
