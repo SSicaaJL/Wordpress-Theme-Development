@@ -12,18 +12,49 @@
 
 	</div><!-- #content -->
 
-	<footer class="container-fluid py-3 bg-light">
-		<div class="row">
-			<div class="col-md-4">
-				<p>Footer content contained here</p>
-			</div>
-			<div class="col-md-8">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis porta purus, in vestibulum magna ullamcorper in. Sed ac bibendum urna, et vehicula dui. Aliquam luctus enim euismod nisl interdum, id suscipit quam sollicitudin. Proin vitae massa vitae magna scelerisque pulvinar. Curabitur posuere eu ex eget feugiat. Suspendisse bibendum pharetra metus ut commodo. Donec in diam nec magna semper pretium. Integer lectus nibh, sagittis mollis finibus eu, imperdiet quis quam.</p>
+	<!-- FOOTER CONTAINER -->
+	<footer class="container-fluid pt-3 sci-bg-blue">
 
-				<p class="float-right">Powered by NUS Science Club</p>
-			</div>
+		<!-- FIRST(TOP) PART OF THE FOOTER -->
+		<div class="row pt-3 text-center text-secondary">
+
+			<!-- SETTING UP WIDGETS AREAS IN COLUMNS -->
+			<?php //Left widget
+				if ( is_active_sidebar( 'footer-widget-l' ) ) {?>
+					<div class="col-md"><?php
+					dynamic_sidebar( 'footer-widget-l' );?>
+					</div><?php
+				}
+			?>
+			<?php //Center widget
+				if ( is_active_sidebar( 'footer-widget-c' ) ) {?>
+					<div class="col-md"><?php
+					dynamic_sidebar( 'footer-widget-c' );?>
+					</div><?php
+				}
+			?>
+			<?php //Right widget
+				if ( is_active_sidebar( 'footer-widget-r' ) ) {?>
+					<div class="col-md"><?php
+					dynamic_sidebar( 'footer-widget-r' );?>
+					</div><?php
+				}
+			?>
+		</div><hr class="sci-hr-white">
+
+		<!-- SECOND(BOTTOM) PART OF THE FOOTER -->
+		<div class="row pb-3 text-center text-secondary">
+			<?php //Bottom widget
+				if ( is_active_sidebar( 'footer-widget-b') ) {?>
+					<hr class="sci-hr-white">
+					<div class="col justify-content-center"><?php
+					dynamic_sidebar( 'footer-widget-b' );?>
+					</div><?php
+				}
+			?>
 		</div>
-	</footer><!-- #colophon -->
+	</footer>
+	<!-- /FOOTER CONTAINER -->
 
 <?php wp_footer(); ?>
 
