@@ -33,8 +33,8 @@ get_header();
 			</div>
 
 			<div>
-				<span class="float-right" style="font-size: 0.95rem;"><?php next_post_link( '%link', '%title >>', TRUE ); ?></span>
-				<span class="float-left" style="font-size: 0.95rem;"><?php previous_post_link( '%link', '<< %title', TRUE ); ?></span>
+				<span class="float-left" style="font-size: 0.95rem;"><?php next_post_link( '%link', '<< %title', TRUE ); ?></span>
+				<span class="float-right" style="font-size: 0.95rem;"><?php previous_post_link( '%link', '%title >>', TRUE ); ?></span>
 			</div><br>
 
 			<div>
