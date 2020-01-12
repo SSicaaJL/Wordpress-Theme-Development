@@ -23,18 +23,16 @@
 	<?php wp_head(); ?>
 </head>
 
-<!-- Most classes provided are default in _s, very definitely will be changed to be used with bootstrap -->
-
 <body <?php body_class(); ?>>
 <header>
 
-	<!-- NAVIGATION -->
-	<nav class="navbar navbar-expand-md navbar-light bg-light">
+	<!-- NAVIGATION TOP BAR -->
+	<nav class="navbar navbar-expand-md navbar-dark sci-bg-orange">
 
 		<!-- TITLE LINK -->
 		<!-- Should be redone to contain a NUS Science logo rather than an echo-ed text 
 		temporarily just an echo-ed site title -->
-		<a class='navbar-brand' href='<?php echo esc_url(home_url()) ?>'><?php echo get_bloginfo('name') ?></a>
+		<a class='navbar-brand' href='<?php echo esc_url(home_url()) ?>' style="font-weight: 500;"><?php echo get_bloginfo('name') ?></a>
 
 		<!-- BOOTSTRAP RESPONSIVE COLLAPSIBLE NAVIGATION MENU & BUTTON -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -57,4 +55,4 @@
 
 </header>
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content bg-light">
