@@ -140,6 +140,17 @@ function nusscistudentlife_widgets_init() {
 		'before_title'	=> '<h6 class="text-light">',
 		'after_title'	=> '</h6>',
 	));
+
+	/** STUDENT ARTICLE WIDGETS */
+	register_sidebar( array ( // STUDENT ARTICLE SIDE CONTENT (RIGHT)
+		'name'			=> esc_html__( 'Student Article Side Content', 'nusscistudentlife' ),
+		'id'			=> 'studentarticle-widget-1',
+		'description'	=> esc_html__( 'Add content to the right of the student latest articles', 'nusscistudentlife' ),
+		'before_widget'	=> '<div>',
+		'after_widget'	=> '</div>',
+		'before_title'	=> '<h5>',
+		'after_title'	=> '</h5>',
+	));
 }
 add_action( 'widgets_init', 'nusscistudentlife_widgets_init' );
 
@@ -151,19 +162,22 @@ function nusscistudentlife_scripts() {
 	wp_enqueue_style('bootstrap-core', get_template_directory_uri() .'/css/bootstrap.min.css'); // link bootstrap css
 	wp_enqueue_style('fontawesome', get_template_directory_uri() .'/css/fontawesome/css/all.min.css'); // link fontawesome icons
 	wp_enqueue_style('nusscistudentlife-style', get_stylesheet_uri() ); // link style.css
-
-	/** TEMPORARY STYLES */
-	//wp_enqueue_style('header-style', get_template_directory_uri() .'headerstyle.css'); // will merge with style.css later on
 	
 	/** SCRIPTS */
 	wp_enqueue_script('bootstrap-js', get_template_directory_uri() .'/js/bootstrap.min.js', array('jquery'), null, true); /** bootstrap js */
 
-	/** LEAVE ALONE FIRST */
-	/** if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-	*	wp_enqueue_script( 'comment-reply' );
-	*} */ 
+	/** COMMENT THREADING */
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'nusscistudentlife_scripts' );
+
+
+function nusscistudentlife_custom_excerpt_length( $length ) {
+   return 20;
+}
+add_filter( 'excerpt_length', 'nusscistudentlife_custom_excerpt_length', 999 );
 
 
 
