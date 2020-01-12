@@ -26,16 +26,36 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 /** CUSTOM STYLES */
-.sci-bg-orange {
+.sci-bg-orange { /* Used in the nav tag(in header) */
 	background-color: #ef7b00!important;
 }
 
-.sci-bg-blue {
+.sci-bg-blue { /* Used in the footer tag */
 	background-color: #003062!important;
 }
 
-.sci-hr-white {
+.sci-hr-white { /* The horizontal line in the footer */
 	border-top-color: rgba(255,255,255,0.2);
+}
+
+.sci-card-border {
+	border-radius: 0!important;
+	border: 0!important;
+	border-bottom: 3px solid #ef7b00!important;
+}
+
+.sci-card-body {
+	font-size: 0.9rem;
+}
+
+.sci-title {
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: #003062;
+}
+
+.sci-popup {
+	box-shadow: .2rem .2rem .4rem rgba(211, 219, 233,1), -.2rem -.2rem .4rem rgba(255,255,255,.6)!important;
 }
 
 /** OVERWRITING BOOTSTRAP */
@@ -48,10 +68,18 @@ a:hover {
 }
 
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 300;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Setting the main font for the entire site */
+	font-weight: 300; 
 }
 
 h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+}
+
+.form-control {
+	outline: none;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
 	font-weight: 300;
 }
