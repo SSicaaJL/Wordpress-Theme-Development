@@ -15,7 +15,7 @@ get_header();
 </div>
 
 <main class="container-fluid">
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+	<?php if ( have_posts() ) : the_post();?>
 	<div class="row">
 	<img src="<?php echo get_the_post_thumbnail_url() ?>" class="w-100" style="height: 70vh;">
 
@@ -28,7 +28,6 @@ get_header();
 			<div>
 					<h3 class=><?php the_title(); ?></h3><?php
 					the_content();?><?php
-				endwhile;
 			endif;?>
 			</div>
 
@@ -39,8 +38,8 @@ get_header();
 
 			<div>
 			<?php 
-				if ( comments_open() || get_comments_number() ) :
-				comments_template();
+				if ( comments_open() ) : // If there are comments, pull the comments function using comments_template()
+				comments_template(); // A wordpress function to call comments.php
 				endif;
 			?>
 			
