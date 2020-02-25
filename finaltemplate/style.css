@@ -64,6 +64,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	max-width: 300px;
 }
 
+.sci-post-thumbnail {
+	min-height: 50vh;
+	max-height: 60vh;
+}
+
 /** OVERWRITING BOOTSTRAP */
 a {
 	color: #000000;
