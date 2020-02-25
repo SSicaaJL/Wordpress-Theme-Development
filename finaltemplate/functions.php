@@ -110,7 +110,7 @@ function nusscistudentlife_widgets_init() {
 		'description'	=> esc_html__( 'Add content to the left of the footer', 'nusscistudentlife' ),
 		'before_widget'	=> '<div>',
 		'after_widget'	=> '</div>',
-		'before_title'	=> '<h6 class="text-light">',
+		'before_title'	=> '<h6>',
 		'after_title'	=> '</h6>',
 	));
 	register_sidebar( array( // FOOTER ITEM (CENTER)
@@ -119,7 +119,7 @@ function nusscistudentlife_widgets_init() {
 		'description'	=> esc_html__( 'Add content to the center of the footer', 'nusscistudentlife' ),
 		'before_widget'	=> '<div>',
 		'after_widget'	=> '</div>',
-		'before_title'	=> '<h6 class="text-light">',
+		'before_title'	=> '<h6>',
 		'after_title'	=> '</h6>',
 	));
 	register_sidebar( array( // FOOTER ITEM (RIGHT)
@@ -128,7 +128,7 @@ function nusscistudentlife_widgets_init() {
 		'description'	=> esc_html__( 'Add content to the right of the footer', 'nusscistudentlife' ),
 		'before_widget'	=> '<div>',
 		'after_widget'	=> '</div>',
-		'before_title'	=> '<h6 class="text-light">',
+		'before_title'	=> '<h6>',
 		'after_title'	=> '</h6>',
 	));
 	register_sidebar( array( // FOOTER MENU
@@ -137,7 +137,7 @@ function nusscistudentlife_widgets_init() {
 		'description'	=> esc_html__( 'Add content and menu to the footer', 'nusscistudentlife' ),
 		'before_widget'	=> '<div>',
 		'after_widget'	=> '</div>',
-		'before_title'	=> '<h6 class="text-light">',
+		'before_title'	=> '<h6>',
 		'after_title'	=> '</h6>',
 	));
 
@@ -218,5 +218,3 @@ add_filter( 'excerpt_length', 'nusscistudentlife_custom_excerpt_length', 999 );
 // if ( defined( 'JETPACK__VERSION' ) ) {
 //	require get_template_directory() . '/inc/jetpack.php';
 //}
-
-
