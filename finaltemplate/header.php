@@ -43,7 +43,7 @@
 			'theme_location'    => 'primary',
 			'depth'             => 1, // 1 = no dropdowns, 2 = with dropdowns.
 			'container'         => 'div',
-			'container_class'   => 'collapse navbar-collapse justify-content-center', //.justify-content-center is a bootstrap class to push contents to the rightmost of the screen
+			'container_class'   => 'collapse navbar-collapse justify-content-center text-uppercase', //.justify-content-center is a bootstrap class to push contents to the rightmost of the screen
 			'container_id'      => 'navbarNav',
 			'menu_class'        => 'navbar-nav',
 			'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
