@@ -175,7 +175,6 @@ function nusscistudentlife_scripts() {
 	
 	/** SCRIPTS */
 	wp_enqueue_script('bootstrap-js', get_template_directory_uri() .'/js/bootstrap.min.js', array('jquery'), null, true); /** bootstrap js */
-	wp_enqueue_script('nusscistudentlife-script', get_template_directory_uri() .'/nussciscript.js', array(), null, true);
 
 	/** COMMENT THREADING */
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -186,7 +185,7 @@ add_action( 'wp_enqueue_scripts', 'nusscistudentlife_scripts' );
 
 
 function nusscistudentlife_custom_excerpt_length( $length ) {
-   return 20;
+   return 30;
 }
 add_filter( 'excerpt_length', 'nusscistudentlife_custom_excerpt_length', 999 );
 
