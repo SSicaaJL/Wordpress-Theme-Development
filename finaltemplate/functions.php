@@ -185,7 +185,7 @@ add_action( 'wp_enqueue_scripts', 'nusscistudentlife_scripts' );
 
 
 function nusscistudentlife_custom_excerpt_length( $length ) {
-   return 30;
+   return 54;
 }
 add_filter( 'excerpt_length', 'nusscistudentlife_custom_excerpt_length', 999 );
 
