@@ -25,7 +25,10 @@ get_header();
 						<h6 class="p-0 m-0" style="font-weight: 600;"><?php echo get_the_date( 'm.Y' ); ?></h6>
 					</div>
 					<div class="sci-news-thumbnail mx-2">
-					<a href="<?php the_permalink() ?>"><img src="<?php echo get_the_post_thumbnail_url() ?>" style="width: 100%;"></a>
+						<?php if ( has_post_thumbnail() ) {?>
+							<a href="<?php the_permalink() ?>"><img src="<?php echo get_the_post_thumbnail_url() ?>" style="width: 100%;"></a>
+						<?php } else {?>
+							<a href="<?php the_permalink() ?>"><img src="<?php echo get_template_directory_uri()?>/images/no_post_thumbnail.jpeg" style="width: 100%;"></a><?php } ?>
 					</div>
 					<div class="mx-2">
 						<div>
