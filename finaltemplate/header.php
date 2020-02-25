@@ -24,13 +24,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-<header>
+<header class="border mb-2">
 	<center>
 		<a class="sci-title pt-3 m-0" href='<?php echo esc_url(home_url()) ?>'><?php echo get_bloginfo('name') ?></a>
 	</center>
 
 	<!-- NAVIGATION TOP BAR -->
-	<nav class="navbar navbar-expand-md navbar-light sci-nav m-0 p-0">
+	<nav class="navbar navbar-expand-md navbar-light sci-nav">
 
 		<!-- BOOTSTRAP RESPONSIVE COLLAPSIBLE NAVIGATION MENU & BUTTON -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
