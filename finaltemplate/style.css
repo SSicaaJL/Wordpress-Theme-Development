@@ -44,7 +44,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .sci-bg-red-soft {
-	background-color: rgba(255, 25, 0, 0.2);
+	background-color: rgba(126, 13, 0, 0.9);
 }
 
 .sci-hr { /* The horizontal line */
@@ -104,4 +104,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .hr-black {
 	border-top-color: black;
+}
+
+.hr-white {
+	border-top-color: rgba(255, 255, 255, 0.25)
 }
