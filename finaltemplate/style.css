@@ -48,7 +48,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .sci-hr { /* The horizontal line */
-	border-top-color: rgba(255,25,0,1);
+	border-bottom: 3px solid rgb(126, 13, 0);
 }
 
 .sci-news-date-block {
