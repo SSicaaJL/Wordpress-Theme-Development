@@ -33,9 +33,10 @@ get_header();
 					<div class="mx-2">
 						<div>
 							<a href="<?php the_permalink() ?>"><h4 class="card-title p-0 m-0"><?php the_title(); ?></h4></a>
-							<h6 class="p-0 m-0" style="font-size:1rem; font-weight: 500;">By <?php the_author_posts_link();?></h6>
+							<h6 class="p-0 m-0" style="font-size:1rem; font-weight: 500;">By <?php the_author_posts_link();?>, <?php echo sci_get_view_count(); ?> views</h6>
 						</div>
 						<p><?php the_excerpt() ?></p>
+						<a href="<?php the_permalink() ?>" class="float-right font-italic px-3">Read more...</a>
 					</div>
 				</div>
 				<hr>
