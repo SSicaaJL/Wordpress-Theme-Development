@@ -11,7 +11,7 @@ get_header();
 ?>
 
 <main class="container-fluid">
-	<div class="row justify-content-center">
+	<div class="row justify-content-center pt-3">
 
 		<!-- MAIN PAGE CONTENTS -->
 		<div class="col-md-10">
