@@ -15,7 +15,7 @@ get_header();
 
 		<!-- MAIN PAGE CONTENTS -->
 		<div class="col-md-10">
-			<h1>Latest Headlines</h1>
+			<h3>Latest Headlines</h3>
 			<?php if ( have_posts() ) :
 				while ( have_posts() ) : the_post();?>
 
@@ -32,7 +32,7 @@ get_header();
 					</div>
 					<div class="mx-2">
 						<div>
-							<a href="<?php the_permalink() ?>"><h3 class="card-title p-0 m-0"><?php the_title(); ?></h3></a>
+							<a href="<?php the_permalink() ?>"><h4 class="card-title p-0 m-0"><?php the_title(); ?></h4></a>
 							<h6 class="p-0 m-0" style="font-size:1rem; font-weight: 500;">By <?php the_author_posts_link();?></h6>
 						</div>
 						<p><?php the_excerpt() ?></p>
