@@ -24,7 +24,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .sci-title { /* Top title styles */
 	font-family: cambria;
 	font-weight: 400;
-	font-size: 50px;
+	font-size: 40px;
 }
 
 .sci-title:hover {
@@ -39,8 +39,29 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-color: #003062!important;
 }
 
+.sci-bg-red {
+	background-color: rgb(126, 13, 0);
+}
+
 .sci-bg-red-soft {
 	background-color: rgba(255, 25, 0, 0.2);
+}
+
+.sci-hr { /* The horizontal line */
+	border-top-color: rgba(255,25,0,1);
+}
+
+.sci-news-date-block {
+	background-color: rgb(126, 13, 0);
+	min-height: 58px;
+	min-width: 85px;
+	max-height: 58px;
+	max-width: 85px;
+}
+
+.sci-news-thumbnail {
+	min-width: 300px;
+	max-width: 300px;
 }
 
 /** OVERWRITING BOOTSTRAP */
@@ -63,4 +84,12 @@ body {
 	-moz-box-shadow: none !important;
 	box-shadow: none !important;
 	font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+}
+
+.hr-black {
+	border-top-color: black;
 }
