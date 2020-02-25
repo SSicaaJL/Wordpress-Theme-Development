@@ -64,6 +64,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	max-width: 300px;
 }
 
+.sci-main-thumbnail {
+	min-width: 800px;
+	max-width: 800px;
+	min-height: 400px;
+	max-height: 400px;
+}
+
 .sci-post-thumbnail {
 	min-height: 50vh;
 	max-height: 60vh;
