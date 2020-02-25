@@ -30,7 +30,7 @@
 	</center>
 
 	<!-- NAVIGATION TOP BAR -->
-	<nav class="navbar navbar-expand-md navbar-light sci-nav m-0 p-0">
+	<nav class="navbar navbar-expand-md navbar-light sci-nav">
 
 		<!-- BOOTSTRAP RESPONSIVE COLLAPSIBLE NAVIGATION MENU & BUTTON -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
