@@ -42,3 +42,25 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .sci-bg-red-soft {
 	background-color: rgba(255, 25, 0, 0.2);
 }
+
+/** OVERWRITING BOOTSTRAP */
+a {
+	color: #000000;
+}
+
+a:hover {
+	color: #000000;
+}
+
+body {
+	font-family: ageo;
+	font-weight: 300; 
+}
+
+.form-control {
+	outline: none;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	font-weight: 300;
+}
