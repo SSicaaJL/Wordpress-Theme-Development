@@ -13,10 +13,10 @@
 	</div><!-- #content -->
 
 	<!-- FOOTER CONTAINER -->
-	<footer class="container-fluid pt-3 sci-bg-blue">
+	<footer class="container-fluid pt-3 bg-light">
 
 		<!-- FIRST(TOP) PART OF THE FOOTER -->
-		<div class="row pt-3 text-center text-secondary">
+		<div class="row pt-3 text-center">
 
 			<!-- SETTING UP WIDGETS AREAS IN COLUMNS -->
 			<?php //Left widget
@@ -40,13 +40,12 @@
 					</div><?php
 				}
 			?>
-		</div><hr class="sci-hr-white">
+		</div><hr>
 
 		<!-- SECOND(BOTTOM) PART OF THE FOOTER -->
-		<div class="row pb-3 text-center text-secondary" style="font-size: 0.8rem;">
+		<div class="row pb-3 text-center" style="font-size: 0.8rem;">
 			<?php //Bottom widget
 				if ( is_active_sidebar( 'footer-widget-b') ) {?>
-					<hr class="sci-hr-white">
 					<div class="col justify-content-center"><?php
 					dynamic_sidebar( 'footer-widget-b' );?>
 					</div><?php
