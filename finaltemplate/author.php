@@ -27,7 +27,7 @@ get_header();
 		<div class="col-md-3">
 			<h3 class="mb-3">Profile</h3>
 			<img src="<?php echo $avatar; ?>" class="rounded-circle mx-auto d-block"><br>
-			<h3 class="text-center"><?php echo $display_name; ?></h3><hr class="sci-hr">
+			<h4 class="text-center"><?php echo $display_name; ?></h4><hr class="sci-hr">
 			<p class="text-center" style="font-size: 1rem;"><i><?php 
 				echo $description; ?></i><br><br>
 				Permissions: <?php echo $role; ?><br>
