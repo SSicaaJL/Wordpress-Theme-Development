@@ -43,6 +43,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-color: rgb(126, 13, 0);
 }
 
+.sci-bg-red-dark {
+	background-color: rgb(120, 13, 0);
+}
+
 .sci-bg-red-soft {
 	background-color: rgba(126, 13, 0, 0.9);
 }
@@ -74,6 +78,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .sci-post-thumbnail {
 	min-height: 50vh;
 	max-height: 60vh;
+}
+
+.sci-footer-a {
+	color: #f8f9fa!important
 }
 
 /** OVERWRITING BOOTSTRAP */
