@@ -33,6 +33,10 @@ get_header();
 				Permissions: <?php echo $role; ?><br>
 				Posts: <?php echo $post_count; ?><br>
 				Last post: <?php echo $last_post; ?>
+
+				<?php if (get_current_user_id() == $id) { ?>
+					<br><br><a href="<?php echo get_permalink( get_page_by_title( 'editprofile' ) ) ?>">Edit Profile</a><?php
+				} ?>
 			</p>
 		</div>
 
