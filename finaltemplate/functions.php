@@ -184,10 +184,19 @@ function nusscistudentlife_scripts() {
 add_action( 'wp_enqueue_scripts', 'nusscistudentlife_scripts' );
 
 
+/** CUSTOM EXCERPT LENGTH */
 function nusscistudentlife_custom_excerpt_length( $length ) {
    return 54;
 }
 add_filter( 'excerpt_length', 'nusscistudentlife_custom_excerpt_length', 999 );
+
+
+/** REMOVE WORDPRESS DEFAULT ADMIN TOPBAR */
+if ( ! current_user_can( 'administrator' ) ) {
+	add_filter('show_admin_bar', '__return_false');
+}
+
+
 
 
 
