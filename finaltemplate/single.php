@@ -51,9 +51,9 @@ get_header();
 
 			<div>
 				<?php 
-					//if ( comments_open() ) : // If there are comments, pull the comments function using comments_template()
-					//comments_template(); // A wordpress function to call
-					//endif;
+					if ( comments_open() ) : // If there are comments, pull the comments function using comments_template()
+					comments_template(); // A wordpress function to call
+					endif;
 				?>
 			</div>
 		</div>
