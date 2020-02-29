@@ -123,7 +123,7 @@ see https://rocketgeek.com/tips-and-tricks/load-a-custom-stylesheet/
 #wpmem_login input{
 	color: #fff;
 	background-color: rgba(126, 13, 0, 0.9);
-	border-color: rgba(126, 13, 0, 0.9);
+	border-color: transparent;
 	border-radius: 1px;
 	font-size: 100%;
 	margin: 0px;
