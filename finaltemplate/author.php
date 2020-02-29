@@ -14,11 +14,11 @@ get_header();
 	<div class="row pt-3">
 
 		<?php // Getting author information
-		$id = get_the_author_meta('ID'); // Getting ID for some functions that requires it
+		$id = get_query_var('author'); // Getting ID for some functions that requires it
 		$user_data = get_userdata($id); // Getting array userdata that contains certain information
 		$avatar = get_avatar_url($id); // Get profile picture
-		$display_name = get_the_author_meta('display_name'); // Display name
-		$description = get_the_author_meta('description'); // Biography
+		$display_name = get_user_meta( $id, 'nickname', true ); // Display name
+		$description = get_user_meta($id, 'description', true); // Biography
 		$post_count = count_user_posts($id); // Total number of posts
 		$role = implode(', ', $user_data->roles); // User permission level
 		$last_post = get_the_date(); // Get last post date
