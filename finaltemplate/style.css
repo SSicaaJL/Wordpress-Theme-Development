@@ -81,7 +81,32 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .sci-footer-a {
-	color: #f8f9fa!important
+	color: #f8f9fa!important;
+}
+
+.sci-footer-a:hover {
+	color: #d4d4d4!important;
+}
+
+.sci-comment-box {
+	border: 1px solid rgb(126, 13, 0);
+	border-radius: 1px;
+	color: rgba(0, 0, 0, 0.9);
+	padding: 4px 10px 4px;
+	background: none repeat scroll 0% 0% #fff;
+}
+
+.sci-comment-box:focus {
+	border: 1px solid rgba(126, 32, 0, 0.4);
+	outline: 0px none;
+}
+
+.sci-comment-post {
+	color: #fff;
+	background-color: rgb(126, 13, 0);
+	border-color: transparent;
+	border-radius: 1px;
+	font-size: 1rem;
 }
 
 /** OVERWRITING BOOTSTRAP */
